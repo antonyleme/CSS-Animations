@@ -1,0 +1,50 @@
+@font-face {
+     font-family: coolveticarg;
+     src: url('coolveticarg.ttf');
+}
+
+body{
+    background-color: #fff;
+}
+
+.logo, .logo-under{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "coolveticarg";
+    font-size: 100px;
+    animation: road 10s linear infinite alternate;
+}
+
+.logo{
+    color: #ffffff36;
+    background-image: url(clipart.png);
+    -webkit-background-clip: text;
+    background-size: cover;
+}
+
+.logo-under{
+    z-index: -1;
+    color: #0984e3;
+}
+
+.wheel{
+    height: 70px;
+    animation: wheel 10s linear infinite alternate;
+}
+
+@keyframes road {
+    from {
+        background-position: left 0 top -30px;
+    }
+    to {
+        background-position: left 500px top -30px;;
+    }
+}
+
+@keyframes wheel{
+    to{
+        transform: rotate(720deg);
+    }
+}
